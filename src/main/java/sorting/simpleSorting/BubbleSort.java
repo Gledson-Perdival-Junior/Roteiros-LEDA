@@ -11,7 +11,17 @@ public class BubbleSort<T extends Comparable<T>> extends AbstractSorting<T> {
 
 	@Override
 	public void sort(T[] array, int leftIndex, int rightIndex) {
-		// TODO Auto-generated method stub	git 
-		throw new UnsupportedOperationException("Not Implemented yet!");
+		boolean achou = true;
+		while (achou){
+			achou = false;
+			for(int i = leftIndex; i < rightIndex; i++){
+				if(array[i].compareTo(array[i+1]) > 0){
+					T temp = array[i];
+					array[i] = array[i+1];
+					array[i+1] = temp;
+					achou = true;
+				}
+			}
+		}
 	}
 }
